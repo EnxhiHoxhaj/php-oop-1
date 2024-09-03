@@ -28,7 +28,7 @@ $the_godfather->addActor('Robert Duvall');
 
 
 
-var_dump($inception, $la_vita_è_bella, $parasite, $amelie, $the_godfather, $spirited_away);
+// var_dump($inception, $la_vita_è_bella, $parasite, $amelie, $the_godfather, $spirited_away);
 ?>
 
 <!DOCTYPE html>
@@ -41,6 +41,40 @@ var_dump($inception, $la_vita_è_bella, $parasite, $amelie, $the_godfather, $spi
 </head>
 
 <body>
+
+    <div>
+        <div class="container">
+            <h2 class="title">I film più consigliati dai nostri utenti:</h2>
+            <div class="card">
+                <ul>
+                    <li>
+                        <span><strong>Titolo:</strong></span>
+                        <span>Inception</span>
+                    </li>
+                    <li>
+                        <span><strong>Regista:</strong></span>
+                        <span>Inception</span>
+                    </li>
+                    <li>
+                        <span><strong>Attori principali:</strong></span>
+                        <span>Inception</span>
+                    </li>
+                    <li>
+                        <span><strong>Lingua originale:</strong></span>
+                        <span>Inception</span>
+                    </li>
+                    <li>
+                        <span><strong>Genere:</strong></span>
+                        <span>Inception</span>
+                    </li>
+                    <li>
+                        <span><strong>Rating:</strong></span>
+                        <span>Inception</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <!-- Oggi pomeriggio ripassate i primi concetti di classe, variabili e metodi d’istanza che abbiamo visto stamattina e create un file index.php in cui:
     - è definita una classe ‘Movie’
     => all’interno della classe sono dichiarate delle variabili d’istanza
