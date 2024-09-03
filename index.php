@@ -1,5 +1,9 @@
 <?php
 
+// inclusione del file Movie.php
+
+require_once __DIR__ . '/Model/Movie.php';
+
 /*Oggi pomeriggio ripassate i primi concetti di classe, variabili e metodi d’istanza che abbiamo visto stamattina e create un file index.php in cui:
  - è definita una classe ‘Movie’
    => all’interno della classe sono dichiarate delle variabili d’istanza
