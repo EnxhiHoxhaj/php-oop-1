@@ -25,7 +25,14 @@ $inception->addActor('Ken Watanabe');
 
 $the_godfather->addActor('Robert Duvall');
 
-
+$db = [
+    new Movie('Inception', 'Christopher Nolan', ['Leonardo DiCaprio', 'Joseph Gordon-Levitt', 'Ellen Page'], 'Inglese', ['Fantascienza', 'Thriller'], 'PG-13'),
+    new Movie('La vita è bella', 'Roberto Benigni', ['Roberto Benigni', ' Nicoletta Braschi,', 'Giorgio Cantarini'], 'Italiano', ['Dramma', 'Commedia'], 'PG-13'),
+    new Movie('Parasite', 'Bong Joon-ho', ['Song Kang-ho', 'Lee Sun-kyun', 'Cho Yeo-jeong'], 'Coreano', ['Thriller', 'Drammatico'], 'R'),
+    new Movie('Amélie', 'Jean-Pierre Jeunet', ['Audrey Tautou', 'Mathieu Kassovitz', 'Rufus'], 'Francese', ['Commedia romantica', 'Fantastico'], 'R'),
+    new Movie('The Godfather', 'Francis Ford Coppola', ['Marlon Brando', 'Al Pacino', 'James Caan'], 'Inglese', ['Drammatico', 'Crime'], 'R'),
+    new Movie('Spirited Away', 'Hayao Miyazaki', ['Rumi Hiiragi', 'Miyu Irino', 'Mari Natsuki'], 'Giapponese', ['Animazione', 'Avventura', 'Fantastico'], 'PG')
+];
 
 
 // var_dump($inception, $la_vita_è_bella, $parasite, $amelie, $the_godfather, $spirited_away);
@@ -46,70 +53,41 @@ $the_godfather->addActor('Robert Duvall');
         <div class="container">
             <h2 class="title">I film più consigliati dai nostri utenti:</h2>
             <div class="card">
-                <ul>
-                    <li>
-                        <h3><?php echo $inception->title ?></span></h3>
-                    </li>
-                    <li>
-                        <span><strong>Regista:</strong></span>
-                        <span><?php echo $inception->director ?></span>
-                    </li>
-                    <li>
-                        <span><strong>Attori principali:</strong></span>
-                        <?php foreach ($inception->mainActors as $actor): ?>
-                            <span><?php echo $actor ?> -</span>
-                        <?php endforeach; ?>
-                    </li>
-                    <li>
-                        <span><strong>Lingua originale:</strong></span>
-                        <span><?php echo $inception->language ?></span>
-                    </li>
-                    <li>
-                        <span><strong>Genere:</strong></span>
-                        <?php foreach ($inception->genre as $gen): ?>
-                            <span><?php echo $gen ?> -</span>
-                        <?php endforeach; ?>
-                    </li>
-                    <li>
-                        <span><strong>Rating:</strong></span>
-                        <span><span><?php echo $inception->rating ?></span></span>
-                    </li>
-                </ul>
-            </div>
-            <div class="card">
-                <ul>
-                    <li>
-                        <h3><?php echo $spirited_away->title ?></h3>
-                    </li>
-                    <li>
-                        <span><strong>Regista:</strong></span>
-                        <span><?php echo $spirited_away->director ?></span>
-                    </li>
-                    <li>
-                        <span><strong>Attori principali:</strong></span>
-                        <?php foreach ($spirited_away->mainActors as $actor): ?>
-                            <span><?php echo $actor ?> -</span>
-                        <?php endforeach; ?>
-                    </li>
-                    <li>
-                        <span><strong>Lingua originale:</strong></span>
-                        <span><?php echo $spirited_away->language ?></span>
-                    </li>
-                    <li>
-                        <span><strong>Genere:</strong></span>
-                        <?php foreach ($spirited_away->genre as $gen): ?>
-                            <span><?php echo $gen ?> -</span>
-                        <?php endforeach; ?>
-                    </li>
-                    <li>
-                        <span><strong>Rating:</strong></span>
-                        <span><span><?php echo $spirited_away->rating ?></span></span>
-                    </li>
-                </ul>
+                <?php foreach ($db as $movie): ?>
+                    <ul>
+                        <li>
+                            <h3><?php echo $movie->title ?></span></h3>
+                        </li>
+                        <li>
+                            <span><strong>Regista:</strong></span>
+                            <span><?php echo $movie->director ?></span>
+                        </li>
+                        <li>
+                            <span><strong>Attori principali:</strong></span>
+                            <?php foreach ($movie->mainActors as $actor): ?>
+                                <span><?php echo $actor ?> -</span>
+                            <?php endforeach; ?>
+                        </li>
+                        <li>
+                            <span><strong>Lingua originale:</strong></span>
+                            <span><?php echo $movie->language ?></span>
+                        </li>
+                        <li>
+                            <span><strong>Genere:</strong></span>
+                            <?php foreach ($movie->genre as $gen): ?>
+                                <span><?php echo $gen ?> -</span>
+                            <?php endforeach; ?>
+                        </li>
+                        <li>
+                            <span><strong>Rating:</strong></span>
+                            <span><span><?php echo $movie->rating ?></span></span>
+                        </li>
+                    </ul>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
-    // <!-- Oggi pomeriggio ripassate i primi concetti di classe, variabili e metodi d’istanza che abbiamo visto stamattina e create un file index.php in cui:
+    <!-- Oggi pomeriggio ripassate i primi concetti di classe, variabili e metodi d’istanza che abbiamo visto stamattina e create un file index.php in cui:
     // - è definita una classe ‘Movie’
     // => all’interno della classe sono dichiarate delle variabili d’istanza
     // => all’interno della classe è definito un costruttore
