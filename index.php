@@ -18,10 +18,17 @@ $the_godfather = new Movie('The Godfather', 'Francis Ford Coppola', ['Marlon Bra
 
 $spirited_away = new Movie('Spirited Away', 'Hayao Miyazaki', ['Rumi Hiiragi', 'Miyu Irino', 'Mari Natsuki'], 'Giapponese', ['Animazione', 'Avventura', 'Fantastico']);
 
+// aggiungo il nome di altri attori principali
+
+$inception->addActor('Tom Hardy', 'Ken Watanabe');
+$inception->addActor('Ken Watanabe');
+
+$the_godfather->addActor('Robert Duvall');
+
+
+
+
 var_dump($inception, $la_vita_è_bella, $parasite, $amelie, $the_godfather, $spirited_away);
-
-
-
 ?>
 
 <!DOCTYPE html>

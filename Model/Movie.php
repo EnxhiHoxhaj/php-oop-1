@@ -16,4 +16,9 @@ class Movie
         $this->language = $_language;
         $this->genre = $_genre;
     }
+
+    public function addActor($_actor)
+    {
+        $this->mainActors[] = $_actor;
+    }
 }
