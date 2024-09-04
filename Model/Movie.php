@@ -8,7 +8,7 @@ class Movie
     public $language;
     public $genre = [];
     public $rating;
-    public $for_who;
+    public $for_who = '';
 
     function __construct($_title, $_director, $_mainActors, $_language, $_genre, $_rating)
     {
