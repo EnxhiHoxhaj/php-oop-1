@@ -7,7 +7,6 @@ class Movie
     public $mainActors = [];
     public $language;
     public $genre = [];
-    public $italian_title;
     public $rating;
     public $for_who;
 
